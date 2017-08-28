@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
 // renders the view of component that has list of books.
-// BookList wil be a container that holds 
-export default class BookList extends Component {
+// BookList wil be a container that holds
+class BookList extends Component {
 
   renderList(){
     return this.props.books.map((book) => {
@@ -22,3 +23,17 @@ export default class BookList extends Component {
     }
   }
 }
+
+// #bridge:
+// mapStateToProps is part of react-redux library
+// this function takes application state as argument
+// the return object will show up as props inside of bookList
+function mapStateToProps(state){
+  return {
+    books: state.books;
+  }
+
+}
+
+
+export default connect(mapStateToProps)(BookList);
