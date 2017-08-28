@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
-// renders the view of component that has list of books. 
+// renders the view of component that has list of books.
+// BookList wil be a container that holds 
 export default class BookList extends Component {
 
   renderList(){
