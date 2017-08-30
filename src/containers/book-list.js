@@ -8,7 +8,7 @@ class BookList extends Component {
   renderList(){
     return this.props.books.map((book) => {
       return (
-        <li key=(book.title) className="list-group-item">
+        <li key={book.title} className="list-group-item">
           {book.title}
         </li>
       )
@@ -16,22 +16,23 @@ class BookList extends Component {
   }
 
   render(){
-    return{
+    return(
       <ul className="List-group col-sm-4">
         {this.renderList()}
       </ul>
-    }
+    )
   }
 }
 
 // #bridge:
 // mapStateToProps is part of react-redux library
 // this function takes application state as argument
-// the return object will show up as props inside of bookList
+// the return object will show up as props inside of bookList component
+// BookList will be parent component and it's children can access this state
 function mapStateToProps(state){
   return {
-    books: state.books;
-  }
+    books: state.books
+  };
 
 }
 
