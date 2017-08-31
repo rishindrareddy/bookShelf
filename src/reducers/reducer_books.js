@@ -4,9 +4,9 @@
 
 export default function() {
   return[
-    {title: 'JavaScript intro'},
-    {title: 'JavaScript intermediate'},
-    {title: 'JavaScript expert'},
-    {title: 'JavaScript ultimate'}
+    {title: 'JavaScript intro', pages: 110},
+    {title: 'JavaScript intermediate', pages: 300},
+    {title: 'JavaScript expert', pages: 700},
+    {title: 'JavaScript ultimate', pages: 500}
   ]
 }
